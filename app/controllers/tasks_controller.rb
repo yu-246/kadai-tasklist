@@ -21,7 +21,6 @@ class TasksController < ApplicationController
             flash.now[:danger] = "Taskが追加されませんでした"
             render :new
         end
-        
     end
     
     def edit
@@ -48,13 +47,10 @@ class TasksController < ApplicationController
         redirect_to tasks_url
     end
     
-    
     private
     
     #Stong Parameter
     def task_params
         params.require(:task).permit(:content)
     end
-
-
 end
