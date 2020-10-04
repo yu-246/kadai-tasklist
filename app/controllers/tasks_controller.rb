@@ -1,5 +1,7 @@
 class TasksController < ApplicationController
-    before_action :set_task, only: [:show, :edit, :destoroy]
+    before_action :set_task, only: [:show, :edit, :destroy]
+   
+   
     def index
         @tasks = Task.all
     end
